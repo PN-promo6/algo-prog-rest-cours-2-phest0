@@ -10,8 +10,6 @@ export class PlayersListComponent implements OnInit {
 
   public players: any;
 
-  public player: any;
-
   constructor(private playersService: PlayersService) { }
 
   ngOnInit() {
@@ -24,11 +22,10 @@ export class PlayersListComponent implements OnInit {
         error => {
           console.log(error);
         });
-    this.playersService.fetchOnePlayer()
+    this.playersService.fetchOnePlayer(2)
       .subscribe(
         res => {
           console.log(res);
-          this.player = res;
         });
   }
 }

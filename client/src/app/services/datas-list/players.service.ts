@@ -14,7 +14,7 @@ export class PlayersService {
     return this.httpClient.get('http://localhost:3000/players');
   }
 
-  public fetchOnePlayer(): Observable<any> {
-    return this.httpClient.get('http://localhost:3000/players/:id');
+  public fetchOnePlayer(id): Observable<any> {
+    return this.httpClient.get('http://localhost:3000/players/' + id);
   }
 }
