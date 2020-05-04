@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="card col-lg-4" *ngFor="let player of players">
+      <img src="{{ player.image }}" class="card-img-top" alt="{{ player.firstName }} {{ player.lastName }}">
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li><strong>Nom :</strong> {{ player.firstName }}</li>
+          <li><strong> Prénom :</strong> {{ player.lastName }}</li>
+          <li><strong>Position sur le terrain :</strong> {{ player.position }}</li>
+          <li><strong>Numéro de maillot :</strong> {{ player.number }}</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Voir biographie</a>
+      </div>
+    </div>
+  </div>
+</div>
