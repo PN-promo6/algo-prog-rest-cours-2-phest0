@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../services/datas-list/players.service';
 
+import { Player } from '../models/player/player';
+
 @Component({
   selector: 'app-players-list',
   templateUrl: './players-list.component.html',
@@ -8,7 +10,7 @@ import { PlayersService } from '../services/datas-list/players.service';
 })
 export class PlayersListComponent implements OnInit {
 
-  public players: any;
+  public players: Player[];
 
   constructor(private playersService: PlayersService) { }
 
