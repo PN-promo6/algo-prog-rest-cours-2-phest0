@@ -15,6 +15,7 @@ export class PlayersListComponent implements OnInit {
   constructor(private playersService: PlayersService) { }
 
   ngOnInit() {
+
     this.playersService.fetchPlayers()
       .subscribe(
         res => {
@@ -24,6 +25,7 @@ export class PlayersListComponent implements OnInit {
         error => {
           console.log(error);
         });
+
     this.playersService.fetchOnePlayer(2)
       .subscribe(
         res => {

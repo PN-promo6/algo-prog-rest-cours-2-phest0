@@ -35,6 +35,12 @@ app.get('/players/:id', function (req, res) {
     res.statusMessage = 'Player not found'; // on prépare le message qui sera envoyé au client
     res.status(404).end(); // on envoi l aréponse avec l'erreur 404 et le message d'erreur défini à la ligne du dessus
 });
+
+app.get("/posts", function (req, res) {
+    console.log("request get on /posts");
+    res.send(posts);
+});
+
 users = [{
         "id": "5eaecda0cba960e77fc9f205",
         "age": 29,
@@ -256,4 +262,50 @@ players = [{
         "image": "https://www.om.fr/sites/default/files/2019-08/MANDANDA.png",
         "Biography": "Quand il débarque à Marseille, Steve Mandanda jouit d’une excellente réputation, mais ne compte aucun match en Ligue 1. Recruté au départ pour concurrencer Cédric Carrasso, le natif de Kinshasa (RD Congo) va prendre place dans les buts olympiens plus tôt que prévu, en raison de la rupture du tendon d’Achille de l’Avignonnais. Steve saisit l’opportunité qui se présente avec brio et panache ! Son premier match, à Caen, fut une démonstration: relance impeccable, excellent coup d’œil, parades décisives... Alors que l’équipe s’enlise dans les profondeurs de la L1, le portier marseillais est la seule satisfaction. Et quand la formation olympienne réagit et retrouve de sa superbe, il reste toujours aussi performant. Son calme et sa maturité séduisent autant que sa régularité et son professionnalisme. Et Raymond Domenech ne s’y trompe pas. Il le sélectionne pour l’Euro 2008. Celui qui ne compte qu’une trentaine de rencontres en Ligue 1 coiffe ainsi au poteau le Parisien Landreau. Plébiscité par la presse qui relate souvent la « Mandandamania », il est reconnu par ses pairs en mai 2008 en recevant le trophée de meilleur gardien de but du Championnat de France. En 2010, il remporte le Championnat de France de L1, la Coupe de la Ligue puis le Trophée des Champions. Après le départ de Mamadou Niang, Didier Deschamps lui confie le brassard de capitaine. Il est retenu par Raymond Domenech pour disputer la Coupe du Monde en Afrique du Sud. Il s’adjuge deux nouvelles Coupes de la Ligue en 2011 puis 2012 et un nouveau Trophée des Champions en 2011. Retenu pour disputer l’Euro 2012 et le Mondial 2014 (qu’il ne dispute finalement à cause d’une blessure aux cervicales), Steve enchaîne les sélections et les matchs sous le maillot blanc. De nouveau, élu meilleur gardien de L1 en 2011, 2015 et 2016, il rejoint Crystal Palace en Angleterre après 8 saisons à Marseille. Il revient sur La Canebière au bout d’un an. Il devient le gardien le plus capé de l’histoire du club avec plus de 400 rencontres disputées avec l’OM. En 2018, après une finale d’Europa League à Lyon, il devient, le 15 juillet à Moscou, champion du monde avec l’équipe de France de Didier Deschamps."
     }
+]
+
+posts = [{
+        "id": "1",
+        "player_id": "1",
+        "player_name": "Dimitri Payet",
+        "message": "bonjour à tous !",
+        "title": "A propos du match de saint-etienne",
+        "date_message": "25.05.2020"
+    },
+    {
+        "id": "2",
+        "player_id": "2",
+        "player_name": "Steve Mandanda",
+        "message": "Restez chez vous en ces temps de confinement",
+        "title": "Fin de la saison",
+        "date_message": "25.03.2020"
+    }, {
+        "id": "3",
+        "player_id": "3",
+        "player_name": "Dimitri Payet",
+        "message": "bonjour à tous !",
+        "title": "A propos du match de saint-etienne",
+        "date_message": "25.05.2020"
+    }, {
+        "id": "4",
+        "player_id": "4",
+        "player_name": "Dimitri Payet",
+        "message": "bonjour à tous !",
+        "title": "A propos du match de saint-etienne",
+        "date_message": "25.05.2020"
+    }, {
+        "id": "5",
+        "player_id": "5",
+        "player_name": "Dimitri Payet",
+        "message": "bonjour à tous !",
+        "title": "A propos du match de saint-etienne",
+        "date_message": "25.05.2020"
+    }, {
+        "id": "6",
+        "player_id": "6",
+        "player_name": "Dimitri Payet",
+        "message": "bonjour à tous !",
+        "title": "A propos du match de saint-etienne",
+        "date_message": "25.05.2020"
+    },
 ]

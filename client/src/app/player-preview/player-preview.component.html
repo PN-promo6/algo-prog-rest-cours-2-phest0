@@ -1,9 +1,7 @@
-<div class="container">
-  <div class="row">
-    <app-player-preview class="col-lg-4" *ngFor="let player of players" [player]="player"></app-player-preview>
-    <!-- <div class="card col-lg-4" *ngFor="let player of players">
-      <img src="{{ player.image }}" class="card-img-top" alt="{{ player.firstName }} {{ player.lastName }}"> -->
-    <!-- <div class="card-body">
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-8">
         <ul class="list-unstyled">
           <li><strong>Nom :</strong> {{ player.firstName }}</li>
           <li><strong> Prénom :</strong> {{ player.lastName }}</li>
@@ -11,8 +9,15 @@
           <li><strong>Position sur le terrain :</strong> {{ player.position }}</li>
           <li><strong>Numéro de maillot :</strong> {{ player.number }}</li>
         </ul>
+      </div>
+      <div class="col-4">
+        <img class="rounded-circle w-75" src="{{ player.image }}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
         <a href="#" class="btn btn-primary">Voir biographie</a>
-      </div> -->
-    <!-- </div> -->
+      </div>
+    </div>
   </div>
 </div>
